@@ -194,23 +194,23 @@ export default function Home() {
         <FormControlLabel
           value="meToMe"
           control={<Radio />}
-          label="自转"
+          label="Default"
           disabled={running}
         />
         <FormControlLabel
           value="manyToOne"
           control={<Radio />}
-          label="多转一"
+          label="Send To"
           disabled={running}
         />
       </RadioGroup>
 
       {radio === "manyToOne" && (
         <div className=" flex flex-col gap-2">
-          <span>转给谁的地址（必填）:</span>
+          <span>Recived Token Address:</span>
           <TextField
             size="small"
-            placeholder="地址"
+            placeholder="address"
             disabled={running}
             onChange={(e) => {
               const text = e.target.value;
