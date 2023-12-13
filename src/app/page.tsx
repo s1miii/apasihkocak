@@ -29,7 +29,7 @@ import useInterval from "@/hooks/useInterval";
 import { handleAddress, handleLog } from "@/utils/helper";
 
 const example =
-  'data:,{"p":"asc-20","op":"mint","tick":"aval","amt":"100000000"}';
+  'data:,{"p":"asc-20","op":"mint","tick":"sektecrot","amt":"100000000"}';
 
 type RadioType = "meToMe" | "manyToOne";
 
@@ -111,13 +111,13 @@ export default function Home() {
 
   const run = useCallback(() => {
     if (privateKeys.length === 0) {
-      pushLog("没有私钥", "error");
+      pushLog("error");
       setRunning(false);
       return;
     }
 
     if (radio === "manyToOne" && !toAddress) {
-      pushLog("没有地址", "error");
+      pushLog("error");
       setRunning(false);
       return;
     }
