@@ -21,7 +21,8 @@ export default function Media() {
     {
       title: "recode by",
       linkText: "Simi",
-      link: "https://facebook.com/b3lalang
+      link: "https://facebook.com/b3lalang",
+    },
   ];
 
   return (
