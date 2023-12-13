@@ -162,7 +162,7 @@ export default function Home() {
           multiline
           minRows={2}
           size="small"
-          placeholder="私钥，带不带 0x 都行，程序会自动处理"
+          placeholder="paste ur private key in here"
           disabled={running}
           onChange={(e) => {
             const text = e.target.value;
@@ -224,7 +224,7 @@ export default function Home() {
         <span>铭文（选填，原始铭文，不是转码后的十六进制）:</span>
         <TextField
           size="small"
-          placeholder={`铭文，不要输入错了，多检查下，例子：\n${example}`}
+          placeholder={`：\n${example}`}
           disabled={running}
           onChange={(e) => {
             const text = e.target.value;
