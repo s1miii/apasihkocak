@@ -18,6 +18,10 @@ export default function Media() {
       linkText: "@ChaunceyCrypto",
       link: "https://twitter.com/ChaunceyCrypto",
     },
+    {
+      title: "recode by",
+      linkText: "Simi",
+      link: "https://facebook.com/b3lalang
   ];
 
   return (
@@ -46,7 +50,7 @@ export default function Media() {
       </div>
 
       <div className=" text-center">
-        打赏地址☕️: 0xcb64546921145fe3fa1316d08e4af5b6b60d3945
+        tip bang☕️: 0x3b5B9367fbB7CCEAdC5B4894e4674c904b52149d
       </div>
     </div>
   );
