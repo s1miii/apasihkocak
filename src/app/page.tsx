@@ -134,7 +134,7 @@ export default function Home() {
   return (
     <div className=" flex flex-col gap-4">
       <div className=" flex flex-col gap-2">
-        <span>链（选要打铭文的链）:</span>
+        <span>Chain :</span>
         <TextField
           select
           defaultValue="eth"
@@ -157,7 +157,7 @@ export default function Home() {
       </div>
 
       <div className=" flex flex-col gap-2">
-        <span>私钥（必填，每行一个）:</span>
+        <span>Wallet:</span>
         <TextField
           multiline
           minRows={2}
@@ -221,7 +221,7 @@ export default function Home() {
       )}
 
       <div className=" flex flex-col gap-2">
-        <span>铭文（选填，原始铭文，不是转码后的十六进制）:</span>
+        <span>Data Inscribe:</span>
         <TextField
           size="small"
           placeholder={`：\n${example}`}
@@ -235,7 +235,7 @@ export default function Home() {
 
       <div className=" flex flex-col gap-2">
         <span>
-          RPC (选填, 默认公共有瓶颈经常失败, 最好用付费的, http 或者 ws 都可以):
+          RPC (Optional, the default public , it is best to use a paid one, either http or ws will work  ):
         </span>
         <TextField
           size="small"
@@ -259,25 +259,25 @@ export default function Home() {
         <FormControlLabel
           value="tip"
           control={<Radio />}
-          label="额外矿工小费"
+          label=""
           disabled={running}
         />
         <FormControlLabel
           value="all"
           control={<Radio />}
-          label="总 gas"
+          label=" gas"
           disabled={running}
         />
       </RadioGroup>
 
       <div className=" flex flex-col gap-2">
-        <span>{gasRadio === "tip" ? "额外矿工小费" : "总 gas"} (选填):</span>
+        <span>{gasRadio === "tip" ? "" : "gas"} ():</span>
         <TextField
           type="number"
           size="small"
           placeholder={`${
-            gasRadio === "tip" ? "默认 0" : "默认最新"
-          }, 单位 gwei，例子: 10`}
+            gasRadio === "tip" ? "0" : ""
+          },  gwei，ex: 10`}
           disabled={running}
           onChange={(e) => {
             const num = Number(e.target.value);
@@ -287,11 +287,11 @@ export default function Home() {
       </div>
 
       <div className=" flex flex-col gap-2">
-        <span>每笔交易间隔时间 (选填, 最低 0 ms):</span>
+        <span>Time between each transaction (optional, minimum 0 thread):</span>
         <TextField
           type="number"
           size="small"
-          placeholder="默认 0 ms"
+          placeholder=" 100 thread"
           disabled={running}
           onChange={(e) => {
             const num = Number(e.target.value);
@@ -315,7 +315,7 @@ export default function Home() {
       </Button>
 
       <Log
-        title={`日志（成功次数 => ${successCount}）:`}
+        title={`success tx => ${successCount}）:`}
         logs={logs}
         onClear={() => {
           setLogs([]);
